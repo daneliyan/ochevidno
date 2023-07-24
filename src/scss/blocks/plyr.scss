@@ -1,0 +1,23 @@
+.plyr {
+  aspect-ratio: 16/9;
+  width: 800px;
+  height: auto;
+  margin: auto;
+}
+.plyr__control svg {
+  color: #fff;
+}
+.plyr__control--overlaid {
+  background: $global-color;
+}
+.plyr--full-ui input[type=range] {
+  color: $global-color;
+}
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+  background: $global-color;
+}
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]:before {
+  background: $global-color;
+}

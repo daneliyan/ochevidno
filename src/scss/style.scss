@@ -1,0 +1,174 @@
+/***** FONTS *****/
+@import "fonts";
+
+/***** GENERAL ELEMENTS *****/
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --font-BernardoModa: "BernardoModa", sans-serif;
+  --font-BernardoModaContrast: "BernardoModaContrast", sans-serif;
+
+  --content-width: 1160px;
+  --container-offset: 15px;
+  // --containerMobile-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #ffffff;
+  --black-color: #131313;
+  --lightBlack-color: #212121;
+  --black-gradient: linear-gradient(114.33deg, #292929 0%, #141414 100%);;
+
+  --font-color: #ECE8E1;
+
+  --darkGreen-color: #172514;
+  --lightGreen-color: #384F33;
+  --green-color: #8BD27C;
+
+  --gold-color: #C9A869;
+  --red-color: #FF3D00;
+
+  --lightGrey-color: #ECECEC;
+  --grey-color: #8E8A83;
+  --darkGrey-color: #4B4B4B;
+  --grey-gradient: linear-gradient(135deg, rgba(41, 41, 41, 1) 0%, rgba(20, 20, 20, 1) 100%);
+}
+
+/***** Mixins *****/
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin grey-gradient {
+  background: rgb(41, 41, 41);
+  background: -moz-linear-gradient(-45deg, rgba(41, 41, 41, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(41, 41, 41, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  background: var(--grey-gradient);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#141414', GradientType=1);
+}
+@mixin gold-gradient-text {
+  background: linear-gradient(45deg, #C27E21 0%, #F1B74B 50%, #763D12 90.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@mixin gold-gradient-text-hover {
+	background: none;
+	-webkit-text-fill-color: var(--font-color);
+	text-fill-color: var(--font-color);
+	color: var(--font-color);
+}
+
+
+/***** BLOCKS GLOBAL *****/
+@import "general";
+@import "blocks/buttons";
+@import "blocks/title";
+@import "blocks/card";
+
+
+/***** COMPONENTS GLOBAL *****/
+@import "blocks/header";
+@import "blocks/footer";
+// @import "blocks/breadcrumbs";
+// @import "blocks/pagination";
+// @import "blocks/tags";
+// @import "blocks/scroll-container";
+// @import "blocks/accordion";
+// @import "blocks/tabs";
+// @import "blocks/tooltip";
+// @import "blocks/hover-dpd";
+// @import "blocks/click-dpd";
+// @import "blocks/fancybox";
+// @import "blocks/plyr";
+// @import "blocks/carousel";
+// @import "blocks/article";
+@import "blocks/sliders";
+@import "blocks/form";
+// @import "blocks/modal";
+
+/***** SECTIONS GLOBAL (Widgets) *****/
+@import "widgets/marquee";
+@import "widgets/hero";
+@import "widgets/recom";
+@import "widgets/benefits";
+@import "widgets/brands";
+@import "widgets/novelty";
+@import "widgets/catbl";
+@import "widgets/sklad";
+@import "widgets/aboutbl";
+@import "widgets/newsbl";
+@import "widgets/blogbl";
+@import "widgets/socbl";
+
+/***** Page (article) *****/
+// @import "page/content";
+
+
+/***** ICONS *****/
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-arrow-big:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e902";
+}
+.icon-bag:before {
+  content: "\e903";
+}
+.icon-burger:before {
+  content: "\e904";
+}
+.icon-checked:before {
+  content: "\e905";
+}
+.icon-chevron:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-compare:before {
+  content: "\e908";
+}
+.icon-heart:before {
+  content: "\e909";
+}
+.icon-repeat:before {
+  content: "\e90a";
+}
+.icon-sign-out:before {
+  content: "\e90b";
+}
+.icon-user:before {
+  content: "\e90c";
+}
+.icon-wallet:before {
+  content: "\e90d";
+}
+.icon-zoom:before {
+  content: "\e90e";
+}
+
+

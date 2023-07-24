@@ -1,0 +1,31 @@
+.tags {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  li {
+    margin: 0 10px 10px 0;
+  }
+}
+.tag {
+  display: inline-block;
+  font-weight: 400;
+  color: $font-color;
+  line-height: 32px;
+  padding: 0 16px;
+  height: 32px;
+  position: relative;
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #ededed;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+  &:hover {
+    color: $white-color;
+		background-color: $hoverGlobal-color;
+  }
+  &:active {
+    color: $global-color;
+    background-color: #f8f8f8;
+  }
+}

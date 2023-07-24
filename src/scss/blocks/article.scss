@@ -1,0 +1,141 @@
+article {
+	padding: 1.5625rem 0;
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 0 0 1em;
+		width: 100%;
+		letter-spacing: 0.01em;
+	}
+	h2 {
+		font-size: 1.25rem;
+	}
+	h3 {
+		font-size: 1.125rem;
+		margin: 0 0 1.5em;
+	}
+	h4 {
+		font-size: 1.125rem;
+	}
+	h5 {
+		font-size: 1rem;
+	}
+	p {
+		margin: 1em 0;
+		width: 100%;
+		text-align: justify;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	b {
+		font-family: "Manrope-Bold";
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		color: $global-color;
+		&:hover {
+			
+			text-decoration: underline;
+		}
+	}
+	img {
+		margin: 0;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 1.5em 0;
+		width: 100%;
+
+		li {
+			padding-left: 0.9375rem;
+			margin: 0.5em 0;
+			position: relative;
+
+			&:before {
+				content: "";
+				width: 0.375rem;
+				height: 0.375rem;
+				background: $global-color;
+				border-radius: 100%;
+				position: absolute;
+				left: 0px;
+				top: 0.5rem;
+			}
+		}
+	}
+	ol {
+		padding: 0 0 0 1rem;
+		margin: 1.5em 0;
+		width: 100%;
+		li {
+			counter-increment: listCounter;
+			margin: 0.5em 0;
+			padding-left: 0.3125rem;
+			&::marker {
+				color: $global-color;
+				font-size: 0.875rem;
+				margin-top: 0.3125rem;
+			}
+		}
+	}
+
+	.table-wrap {
+		@media (max-width: 575.98px) {
+			width: 100%;
+			overflow-x: auto;
+			padding-bottom: 0.9375rem;
+		}
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		@media (max-width: 575.98px) {
+			width: 35.625rem;
+		}
+		td {
+			color: #444;
+			background-color: #fff;
+			border: 1px solid #1c1c1c;
+		}
+		td,
+		th {
+			box-sizing: border-box;
+			padding: 0.3125rem 1.25rem;
+			height: 3.8125rem;
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 1;
+			text-align: left;
+			@media (max-width: 767.98px) {
+				padding: 1.125rem 1.5625rem;
+				font-size: 0.875rem;
+			}
+			@media (max-width: 575.98px) {
+				padding: 0.3125rem 0.9375rem;
+				font-size: 0.875rem;
+			}
+		}
+		th {
+			background: rgba(179, 179, 179, 0.15);
+			border: 1px solid #1c1c1c;
+			font-family: "Manrope-Bold";
+			@media (max-width: 575.98px) {
+				font-size: 0.75rem;
+			}
+		}
+	}
+	&.news {
+		margin-bottom: 3.125rem;
+		color: #010827;
+		p {
+			font-size: 1rem;
+			line-height: 2.3;
+		}
+	}
+}

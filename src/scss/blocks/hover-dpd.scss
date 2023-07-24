@@ -1,0 +1,29 @@
+.dropbtn {
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #ededed;
+  min-width: 300px;
+  padding: 20px;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+}
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown:hover .dropbtn {
+  background-color: #383838;
+}

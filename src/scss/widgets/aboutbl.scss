@@ -1,0 +1,57 @@
+.aboutbl {
+  background-image: url('../img/sparks/sparks-aboutbl.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: top;
+  .section-title {
+    .neon {
+      margin-left: 80px;
+    }
+  }
+  &-container {
+    .row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+      &:nth-child(1) {
+        margin-bottom: 24px;
+      }
+      p {
+        margin-top: 24px;
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 1.5;
+      }
+      img {
+        border-radius: 10px;
+      }
+      .right {
+        width: calc(60% - 20px);
+        margin-left: auto;
+        .col {
+          &:first-child {
+            max-width: 260px;
+            margin-left: auto;
+          }
+          &:not(:last-child) {
+            margin-bottom: 84px;
+          }
+        }
+      }
+      .left {
+        width: calc(40% - 20px);
+        margin-right: auto;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
