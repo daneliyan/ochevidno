@@ -5,13 +5,13 @@ html {
 	overflow-x: hidden;
 }
 body {
-	font-family: "Montserrat", sans-serif;
+	font-family: var(--font-family);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 1.25;
+	line-height: 1.2;
 	color: var(--font-color);
-	background: var(--black-color);
+	background: var(--white-color);
 	margin: 0;
 	overflow-x: hidden;
 	position: relative;

@@ -1,36 +1,46 @@
+
+/*=== DARK LIGHT THEME ==================================*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+	// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+	document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+	themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+	// Add or remove the dark / icon theme
+	document.body.classList.toggle(darkTheme)
+	themeButton.classList.toggle(iconTheme)
+	// We save the theme and the current icon that the user chose
+	localStorage.setItem('selected-theme', getCurrentTheme())
+	localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+
+/*=== Search (Header) ==================================*/
+let searchHiddenInput = document.querySelector("#searchHiddenInput");
+let searchToggleBtn = document.querySelector("#searchToggleBtn");
+let searchBarLabel = document.querySelector("#searchBarLabel");
+searchToggleBtn.addEventListener("click", () => {
+	searchBarLabel.classList.toggle("active");
+	searchHiddenInput.focus();
+});
+
+
 $(document).ready(function () {
-
-	
-	// Marquee
-	function Marquee(selector, speed) {
-		const parentSelector = document.querySelector(selector);
-		const clone = parentSelector.innerHTML;
-		const firstElement = parentSelector.children[0];
-		let i = 0;
-		console.log(firstElement);
-		parentSelector.insertAdjacentHTML('beforeend', clone);
-		parentSelector.insertAdjacentHTML('beforeend', clone);
-
-		setInterval(function () {
-			firstElement.style.marginLeft = `-${i}px`;
-			if (i > firstElement.clientWidth) {
-				i = 0;
-			}
-			i = i + speed;
-		}, 0);
-	}
-	window.addEventListener('load', Marquee('.marquee', 0.2))
-
-
-	// Search (Header)
-	let searchHiddenInput = document.querySelector("#searchHiddenInput");
-	let searchToggleBtn = document.querySelector("#searchToggleBtn");
-	let searchBarLabel = document.querySelector("#searchBarLabel");
-
-	searchToggleBtn.addEventListener("click", () => {
-		searchBarLabel.classList.toggle("active");
-		searchHiddenInput.focus();
-	});
 
 
 	// -------------------- header --------------------------
@@ -45,33 +55,21 @@ $(document).ready(function () {
 
 	// -------------------- burger --------------------------
 	const navMenu = document.getElementById('nav-menu'),
-		navToggle = document.getElementById('nav-toggle'),
-		navClose = document.getElementById('nav-close'),
-		body = document.querySelector('body');
+		navToggle = document.getElementById('nav-toggle');
 
-	/*===== MENU SHOW =====*/
 	if (navToggle) {
 		navToggle.addEventListener('click', () => {
-			navMenu.classList.add('show-menu');
-			body.classList.add('dis-scroll');
-		})
-	}
-
-	/*===== MENU HIDDEN =====*/
-	if (navClose) {
-		navClose.addEventListener('click', () => {
-			navMenu.classList.remove('show-menu');
-			body.classList.remove('dis-scroll');
-		})
+			navToggle.querySelector('i').classList.toggle('icon-remove');
+			navMenu.classList.toggle('show-menu');
+		});
 	}
 
 	/*=============== REMOVE MENU MOBILE ===============*/
-	const navLink = document.querySelectorAll('.nav__link')
+	const navLink = document.querySelectorAll('.nav-list li a, .nav-menu .header-bar .btn-icon')
 
 	const linkAction = () => {
 		const navMenu = document.getElementById('nav-menu')
 		navMenu.classList.remove('show-menu');
-		body.classList.remove('dis-scroll');
 	}
 	navLink.forEach(n => n.addEventListener('click', linkAction));
 
@@ -438,17 +436,6 @@ $(document).ready(function () {
 				$('body').removeClass('modal-open');
 			}
 		});
-	});
-
-	const player = new Plyr('#player');
-
-	// ------------- Show More ---------------------
-	$("article.style-desc").has("p:nth-child(1)").append('<div class="more"><span>Узнать больше</span><img src="img/icons/next.svg" alt=""></div>');
-	$("article.style-desc .more").click(function () {
-		var $this = $(this),
-			$cards = $(this).closest('.style-desc');
-		$cards.toggleClass('open');
-		$this.find('span').html($cards.hasClass('open') ? 'Свернуть' : 'Узнать больше')
 	});
 
 	//end
