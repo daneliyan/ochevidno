@@ -16,8 +16,12 @@ body {
 	overflow-x: hidden;
 	position: relative;
 }
+main {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 section {
-	padding: 50px 0;
+	padding: 15px 0;
 }
 .row {
 	display: flex;
@@ -28,23 +32,46 @@ section {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+.default-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	.col:nth-child(1) {
+		width: calc(32% - 15px);
+	}
+	.col:nth-child(2) {
+		width: calc(68% - 15px);
+	}
+}
+.default-wrapper {
+  width: 100%;
+  padding: 26px 22px;
+  border-radius: 20px;
+  // margin-bottom: 30px;
+  background: var(--grey-color);
+	.big-card {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.button {
+		margin-top: 20px;
+	}
+}
 .link-center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.md-hidden {
-	display: none;
-}
-.dis-scroll {
-	position: fixed;
-	left: 0;
-	top: 0;
-	overflow: hidden;
-	width: 100%;
-	height: 100vh;
-	overscroll-behavior: none;
-}
+// .dis-scroll {
+// 	position: fixed;
+// 	left: 0;
+// 	top: 0;
+// 	overflow: hidden;
+// 	width: 100%;
+// 	height: 100vh;
+// 	overscroll-behavior: none;
+// }
 ::-webkit-scrollbar {
 	width: 0.375rem;
 	background: #fff;

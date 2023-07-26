@@ -38,6 +38,56 @@ searchToggleBtn.addEventListener("click", () => {
 	searchBarLabel.classList.toggle("active");
 	searchHiddenInput.focus();
 });
+document.addEventListener("click", (event) => {
+	if (!event.target.matches("#searchBarLabel, #searchToggleBtn, #searchToggleBtn i, #searchHiddenInput")) {
+		searchBarLabel.classList.remove("active");
+	}
+});
+window.onscroll = () => {
+	searchBarLabel.classList.remove("active");
+}
+
+
+/*=== Burger Menu ==================================*/
+const navMenu = document.getElementById('nav-menu'),
+	navToggle = document.getElementById('nav-toggle');
+if (navToggle) {
+	navToggle.addEventListener('click', () => {
+		navToggle.querySelector('i').classList.toggle('icon-remove');
+		navMenu.classList.toggle('show-menu');
+	});
+}
+const navLink = document.querySelectorAll('.nav-list li a, .nav-menu .header-bar .btn-icon')
+const linkAction = () => {
+	const navMenu = document.getElementById('nav-menu')
+	navMenu.classList.remove('show-menu');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+
+
+/*=== Widget Categories ==================================*/
+const widgetCategoriesItems = document.querySelectorAll('.widget_categories>ul>li')
+widgetCategoriesItems.forEach((item) => {
+	const widgetCategoriesHeader = item.querySelector('.widget_categories>ul>li>a')
+	widgetCategoriesHeader.addEventListener('click', () => {
+		const openItem = document.querySelector('.widget_categories-open')
+		toggleItem(item)
+		if (openItem && openItem !== item) {
+			toggleItem(openItem)
+		}
+	})
+})
+const toggleItem = (item) => {
+	const widgetCategoriesContent = item.querySelector('.widget_categories>ul>li>.widget_categories-submenu')
+	if (item.classList.contains('widget_categories-open')) {
+		widgetCategoriesContent.removeAttribute('style')
+		item.classList.remove('widget_categories-open')
+	} else {
+		widgetCategoriesContent.style.height = widgetCategoriesContent.scrollHeight + 'px'
+		item.classList.add('widget_categories-open')
+	}
+}
 
 
 $(document).ready(function () {
@@ -52,26 +102,6 @@ $(document).ready(function () {
 	// 		$('header').removeClass('active');
 	// 	}
 	// });
-
-	// -------------------- burger --------------------------
-	const navMenu = document.getElementById('nav-menu'),
-		navToggle = document.getElementById('nav-toggle');
-
-	if (navToggle) {
-		navToggle.addEventListener('click', () => {
-			navToggle.querySelector('i').classList.toggle('icon-remove');
-			navMenu.classList.toggle('show-menu');
-		});
-	}
-
-	/*=============== REMOVE MENU MOBILE ===============*/
-	const navLink = document.querySelectorAll('.nav-list li a, .nav-menu .header-bar .btn-icon')
-
-	const linkAction = () => {
-		const navMenu = document.getElementById('nav-menu')
-		navMenu.classList.remove('show-menu');
-	}
-	navLink.forEach(n => n.addEventListener('click', linkAction));
 
 	// --------------------- Tabs ---------------------------
 	var tab = $('#tabs .tabs-items > div');

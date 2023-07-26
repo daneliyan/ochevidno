@@ -1,24 +1,38 @@
 /*-----buttons----*/
-// .button {
-// 	&.btn-c {
-// 				display: inline-flex;				
-// 				align-items: center;
-// 				justify-content: center;
-// 				font-family: "Manrope-Medium";
-// 				font-weight: 500;
-// 				font-size: 1rem;
-// 				line-height: 1;
-// 				width: 13.75rem;
-// 				height: 3.4375rem;
-// 				background: rgba(255, 255, 255, 0.05);
-// 				color: #ffffff;
-// 				border: 1px #ffffff solid;
-// 				&:hover {
-// 					background: $global-color;
-// 					border-color: $global-color;
-// 				}
-// 			}
-// }
+.button {
+	display: inline-flex;				
+	align-items: center;
+	justify-content: center;
+	padding: 18px 54px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.2;
+	border-radius: 14px;
+	width: 100%;
+	height: 60px;
+	border: 0;outline:none;
+	&.btn-b {
+		color: var(--white-color);
+		background: var(--black-color);
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&.btn-w {
+		color: var(--font-color);
+		background: var(--white-color);
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&.btn-v {
+		color: var(--white-color);
+		background: var(--violet-color);
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
 
 .btn-reset {
 	display: inline-flex;

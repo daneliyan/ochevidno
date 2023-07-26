@@ -4,8 +4,8 @@
 /***** GENERAL ELEMENTS *****/
 :root {
   // base
-  --font-family: "Rubik", "Roboto", sans-serif;
-  --font-roboto: "Roboto", "Rubik", sans-serif;
+  --font-family: 'Rubik', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
 
   --content-width: 1320px;
   --container-offset: 15px;
@@ -24,11 +24,14 @@
   --turquoise-color: #1DC4C4;
   --pink-color: #B913C8;
   --violet-color: #6E42ED;
+  --yellow-color: #F6D732;
 
   // --lightGrey-color: #ECECEC;
   --grey-color: #F3F3F3;
   --darkGrey-color: #A8A8A8;
   // --darkGrey-color: #4B4B4B;
+
+  --card-bg: #ffffff;
 }
 
 /***** Mixins *****/
@@ -41,13 +44,13 @@
 /***** BLOCKS GLOBAL *****/
 @import "general";
 @import "blocks/buttons";
-// @import "blocks/title";
-// @import "blocks/card";
+@import "blocks/title";
+@import "blocks/card";
 
 
 /***** COMPONENTS GLOBAL *****/
 @import "blocks/header";
-// @import "blocks/footer";
+@import "blocks/footer";
 // @import "blocks/breadcrumbs";
 // @import "blocks/pagination";
 // @import "blocks/tags";
@@ -62,11 +65,11 @@
 // @import "blocks/carousel";
 // @import "blocks/article";
 // @import "blocks/sliders";
-// @import "blocks/form";
+@import "blocks/form";
 // @import "blocks/modal";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
-// @import "widgets/marquee";
+@import "widgets/aside";
 
 /***** Page (article) *****/
 // @import "page/content";
@@ -90,6 +93,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-heart-outline:before {
+  content: "\e917";
+}
+.icon-star:before {
+  content: "\e918";
+}
+.icon-star-solid:before {
+  content: "\e919";
+}
+.icon-viber:before {
+  content: "\e91a";
+}
 .icon-articles:before {
   content: "\e900";
 }
