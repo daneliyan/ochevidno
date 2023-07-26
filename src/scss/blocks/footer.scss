@@ -91,6 +91,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       width: 62px;
       height: 62px;
       margin-right: 22px;
@@ -99,6 +100,7 @@
       border: 2px solid var(--white-color);
     }
     p {
+      margin: 0;
       font-size: 18px;
       font-weight: 700;
       span {
@@ -132,5 +134,132 @@
 		i {
 			color: var(--white-color);
 		}
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /*-----footer-----*/
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .custom-logo-link {
+      margin-bottom: 24px;
+    }
+    &-container {
+      .col {
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: calc(50% - 15px);
+        }
+      }
+      // .search-label {
+      //   width: 100%;
+      //   margin-bottom: 28px;
+      // }
+    }
+    &-menu {
+      flex-direction: column;
+      li {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+      }
+      a {
+        font-size: 15px;
+      }
+    }
+    &-links {
+      a:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    &-socials {
+      a {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+    &-copy {
+      margin-top: 40px;
+      align-items: flex-start;
+      .number {
+        width: 50px;
+        height: 50px;
+        margin-right: 16px;
+        font-size: 14px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .social-btn {
+    width: 44px;
+    height: 44px;
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  /*-----footer-----*/
+  .footer {
+    padding-bottom: 24px;
+    .custom-logo-link {
+      margin-bottom: 20px;
+    }
+    &-container {
+      flex-direction: column;
+      .col {
+        &:nth-child(1) {
+          margin-bottom: 24px;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 100%;
+        }
+      }
+      .search-label {
+        margin-bottom: 20px;
+      }
+    }
+    &-menu {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  /*-----footer-----*/
+  .footer {
+    padding-top: 30px;
+    &-copy {
+      margin-top: 32px;
+      .number {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        font-size: 10px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
   }
 }
