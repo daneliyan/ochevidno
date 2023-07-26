@@ -51,7 +51,7 @@
 /***** COMPONENTS GLOBAL *****/
 @import "blocks/header";
 @import "blocks/footer";
-// @import "blocks/breadcrumbs";
+@import "blocks/breadcrumbs";
 // @import "blocks/pagination";
 // @import "blocks/tags";
 // @import "blocks/scroll-container";
@@ -70,6 +70,8 @@
 
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/aside";
+@import "widgets/404";
+@import "widgets/contacts";
 
 /***** Page (article) *****/
 // @import "page/content";

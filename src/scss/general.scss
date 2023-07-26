@@ -43,6 +43,18 @@ section {
 	.col:nth-child(2) {
 		width: calc(68% - 15px);
 	}
+	&-reverse {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+		.col:nth-child(1) {
+			width: calc(68% - 15px);
+		}
+		.col:nth-child(2) {
+			width: calc(32% - 15px);
+		}
+	}
 }
 .default-wrapper {
   width: 100%;
@@ -59,7 +71,8 @@ section {
 	}
 }
 @media screen and (max-width: 1279px) {
-	.default-container {
+	.default-container,
+	.default-container-reverse {
 		justify-content: flex-start;
 		flex-direction: column;
 		.col:nth-child(1) {
