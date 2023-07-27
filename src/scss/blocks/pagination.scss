@@ -42,14 +42,13 @@
 			background-color: var(--font-color);
 		}
 	}
-	// .prev,
-	// .next {
-	// 	&:hover {
-	// 		&:after {
-	// 			border-color: $white-color;
-	// 		}
-	// 	}
-	// }
+	a.page-numbers.prev,
+	a.page-numbers.next {
+		&:hover {
+			color: var(--violet-color);
+			background-color: var(--white-color);
+		}
+	}
 
 	.prev {
 		position: absolute;

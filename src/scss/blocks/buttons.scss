@@ -71,6 +71,23 @@
   }
 }
 
+.dark-theme {
+	/*-----buttons----*/
+	.button {
+		// &.btn-b {
+		// 	color: var(--white-color);
+		// 	background: var(--black-color);
+		// }
+		&.btn-w {
+			background-color: #25212F;
+		}
+		// &.btn-v {
+		// 	color: var(--white-color);
+		// 	background: var(--violet-color);
+		// }
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	/*-----buttons----*/
 	.button {

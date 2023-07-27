@@ -26,12 +26,17 @@
   --violet-color: #6E42ED;
   --yellow-color: #F6D732;
 
-  // --lightGrey-color: #ECECEC;
   --grey-color: #F3F3F3;
   --darkGrey-color: #A8A8A8;
-  // --darkGrey-color: #4B4B4B;
 
   --card-bg: #ffffff;
+}
+
+body.dark-theme {
+  background: #25212F;
+  // colors
+  --font-color: #ffffff;
+  --card-bg: #25212F;
 }
 
 /***** Mixins *****/
@@ -54,17 +59,9 @@
 @import "blocks/breadcrumbs";
 @import "blocks/pagination";
 @import "blocks/tags";
-// @import "blocks/scroll-container";
-// @import "blocks/accordion";
-// @import "blocks/tabs";
-// @import "blocks/tooltip";
-// @import "blocks/hover-dpd";
-// @import "blocks/click-dpd";
 // @import "blocks/fancybox";
-// @import "blocks/plyr";
 @import "blocks/carousel";
 @import "blocks/article";
-// @import "blocks/sliders";
 @import "blocks/form";
 // @import "blocks/modal";
 
@@ -73,14 +70,13 @@
 @import "widgets/404";
 @import "widgets/contacts";
 @import "widgets/archive";
+@import "widgets/dark-theme";
 
 /***** Page (article) *****/
 // @import "page/content";
 
 
 /***** ICONS *****/
-
-
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;

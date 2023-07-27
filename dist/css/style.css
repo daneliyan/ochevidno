@@ -87,6 +87,12 @@
   --card-bg: #ffffff;
 }
 
+body.dark-theme {
+  background: #25212F;
+  --font-color: #ffffff;
+  --card-bg: #25212F;
+}
+
 /***** Mixins *****/
 /***** BLOCKS GLOBAL *****/
 /*-----generals-----*/
@@ -231,10 +237,6 @@ section {
   height: 18.75rem;
   border-radius: 1rem;
   background: var(--violet-color);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--green-color);
 }
 
 * {
@@ -569,6 +571,13 @@ th {
 }
 .btn-icon:hover i {
   color: var(--white-color);
+}
+
+.dark-theme {
+  /*-----buttons----*/
+}
+.dark-theme .button.btn-w {
+  background-color: #25212F;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1381,15 +1390,15 @@ th {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  color: var(--black-color);
+  color: var(--black-color) !important;
   border-radius: 14px;
   outline: none;
   border: none;
-  background: var(--white-color);
+  background: var(--white-color) !important;
   transition: 0.3s ease;
 }
 .search-input::placeholder {
-  color: var(--darkGrey-color);
+  color: var(--darkGrey-color) !important;
 }
 
 .search-btn {
@@ -1858,6 +1867,11 @@ th {
   color: var(--white-color);
   background-color: var(--font-color);
 }
+.nav-links a.page-numbers.prev:hover,
+.nav-links a.page-numbers.next:hover {
+  color: var(--violet-color);
+  background-color: var(--white-color);
+}
 .nav-links .prev {
   position: absolute;
   left: 0;
@@ -2156,7 +2170,7 @@ th {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--text-color);
+  color: var(--font-color);
 }
 .comment-text {
   font-size: 16px;
@@ -2338,27 +2352,6 @@ input::placeholder,
 textarea::placeholder {
   color: var(--darkGrey-color);
 }
-input:focus,
-textarea:focus {
-  /* Firefox 19+ */
-  /* Firefox 18- */
-}
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  color: var(--black-color);
-}
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-  color: var(--black-color);
-}
-input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder {
-  color: var(--black-color);
-}
-input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder {
-  color: var(--black-color);
-}
 
 @media screen and (max-width: 1024px) {
   input {
@@ -2486,7 +2479,7 @@ textarea:focus:-ms-input-placeholder {
   background: var(--pink-color);
 }
 .widget_subscribe {
-  background: var(--violet-color);
+  background: var(--violet-color) !important;
 }
 .widget_subscribe .logo {
   margin-bottom: 20px;
@@ -2496,6 +2489,10 @@ textarea:focus:-ms-input-placeholder {
 }
 .widget_subscribe form {
   margin-top: 48px;
+}
+.widget_subscribe form input {
+  color: var(--black-color) !important;
+  background: var(--white-color) !important;
 }
 .widget_latestposts .main-card:not(:last-child) {
   margin-bottom: 16px;
@@ -2790,6 +2787,56 @@ textarea:focus:-ms-input-placeholder {
     margin-bottom: 20px;
   }
 }
+.dark-theme .default-wrapper,
+.dark-theme .widget {
+  background: #35313F;
+}
+
+.dark-theme {
+  /*-----pagination-----*/
+}
+.dark-theme.error404 .button.btn-w {
+  background-color: var(--violet-color);
+}
+.dark-theme .options li {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-theme input,
+.dark-theme textarea {
+  color: var(--white-color);
+  background: #25212F;
+}
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: #A8A8A8;
+}
+.dark-theme .post-per-page > span, .dark-theme .post-per-page-number {
+  color: #ffffff;
+}
+.dark-theme .nav-links .page-numbers {
+  color: var(--font-color);
+  background-color: #25212F;
+}
+.dark-theme .nav-links .page-numbers.disabled {
+  background-color: #25212F !important;
+}
+.dark-theme .nav-links .current,
+.dark-theme .nav-links a.page-numbers:hover {
+  color: #35313F;
+  background-color: var(--white-color);
+}
+.dark-theme .nav-links a.page-numbers.prev:hover,
+.dark-theme .nav-links a.page-numbers.next:hover {
+  color: var(--violet-color);
+  background-color: #25212F;
+}
+.dark-theme .post {
+  background-color: #35313F;
+}
+.dark-theme .comment {
+  background-color: #25212F;
+}
+
 /***** Page (article) *****/
 /***** ICONS *****/
 [class^=icon-], [class*=" icon-"] {

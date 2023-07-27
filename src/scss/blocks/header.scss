@@ -81,13 +81,13 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  color: var(--black-color);
+  color: var(--black-color) !important;
   border-radius: 14px;
   outline: none;border: none;
-  background: var(--white-color);
+  background: var(--white-color) !important;
   transition: .3s ease;
   &::placeholder {
-    color: var(--darkGrey-color);
+    color: var(--darkGrey-color) !important;
   }
 }
 .search-btn {

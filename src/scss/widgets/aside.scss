@@ -109,7 +109,7 @@
       }
   }
   &_subscribe {
-    background: var(--violet-color);
+    background: var(--violet-color) !important;
     .logo {
       margin-bottom: 20px;
     }
@@ -118,6 +118,10 @@
     }
     form {
       margin-top: 48px;
+      input {
+        color: var(--black-color) !important;
+        background: var(--white-color) !important;
+      }
     }
   }
   &_latestposts {
