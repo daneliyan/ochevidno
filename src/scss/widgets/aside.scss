@@ -120,6 +120,11 @@
       margin-top: 48px;
     }
   }
+  &_latestposts {
+    .main-card:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
 }
 .socials {
   display: grid;

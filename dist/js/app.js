@@ -62,6 +62,7 @@ if (navToggle) {
 const navLink = document.querySelectorAll('.nav-list li a, .nav-menu .header-bar .btn-icon')
 const linkAction = () => {
 	const navMenu = document.getElementById('nav-menu')
+	navToggle.querySelector('i').classList.toggle('icon-remove');
 	navMenu.classList.remove('show-menu');
 	body.classList.remove('dis-scroll');
 }

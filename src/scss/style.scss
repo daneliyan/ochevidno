@@ -52,8 +52,8 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/breadcrumbs";
-// @import "blocks/pagination";
-// @import "blocks/tags";
+@import "blocks/pagination";
+@import "blocks/tags";
 // @import "blocks/scroll-container";
 // @import "blocks/accordion";
 // @import "blocks/tabs";
@@ -72,6 +72,7 @@
 @import "widgets/aside";
 @import "widgets/404";
 @import "widgets/contacts";
+@import "widgets/archive";
 
 /***** Page (article) *****/
 // @import "page/content";
@@ -95,6 +96,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-next:before {
+  content: "\e91b";
+}
+.icon-play:before {
+  content: "\e91c";
+}
+.icon-prev:before {
+  content: "\e91d";
+}
+.icon-share:before {
+  content: "\e91e";
+}
 .icon-heart-outline:before {
   content: "\e917";
 }
