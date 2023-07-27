@@ -1,3 +1,4 @@
+$(document).ready(function () {
 
 /*=== DARK LIGHT THEME ==================================*/
 const themeButton = document.getElementById('theme-button')
@@ -92,3 +93,16 @@ const toggleItem = (item) => {
 		item.classList.add('widget_categories-open')
 	}
 }
+
+
+
+$('.owl-carousel').owlCarousel({
+	loop: true,
+	margin: 10,
+	items: 1,
+	nav: true,
+	navText: false,
+	autoHeight: true,
+})
+
+});
